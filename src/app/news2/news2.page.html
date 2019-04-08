@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab Two
+    </ion-title>
+    <ion-item>
+      <ion-label>Select Newstype</ion-label>
+      <ion-select [(ngModel)]="type" (ionChange)="searchChanged($event)">
+        <ion-select-option value="">All</ion-select-option>
+        <ion-select-option value="bbc" >BBC</ion-select-option>
+        <ion-select-option value="nytimes">NYTimes</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor= "let article of data?.articles" (click)="onGoToNewsSinglePage(article)">
+    
+    <!--  <ion-img [src]="article.urlToImage"></ion-img>-->
+
+     <ion-card-content>
+       <ion-card-title>{{article.title}}</ion-card-title>
+       
+       <!-- <p>{{article.description}}</p>-->
+     </ion-card-content>
+   </ion-card>
+</ion-content>

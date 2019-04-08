@@ -18,23 +18,15 @@ const routes: Routes = [
       },
 
       {
-        path: 'tab2',
+        path: 'news2',
         children: [
           {
             path: '',
-            loadChildren: '../tab2/tab2.module#Tab2PageModule'
+            loadChildren: '../news2/news2.module#News2PageModule'
           }
         ]
       },
-      {
-        path: 'tab3',
-        children: [
-          {
-            path: '',
-            loadChildren: '../tab3/tab3.module#Tab3PageModule'
-          }
-        ]
-      },
+      
       {
         path: '',
         redirectTo: '/tabs/news',

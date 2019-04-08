@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { NewsSinglePage } from './news-single.page';
 
+
 const routes: Routes = [
   {
     path: '',
