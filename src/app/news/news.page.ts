@@ -12,14 +12,10 @@ export class NewsPage implements OnInit {
   constructor(private newsService: NewsService, private router: Router){}
 
   ngOnInit(){
-    //this.newsService.getData('top-headlines?country=us&category=business')
-    //this.newsService.getData('top-headlines?country=gb')
-    //this.newsService.getData('everything?sources=bbc-news&from=2019-03-16&to=2019-04-06&sortBy=popularity')
-    this.newsService.getData('everything?domains=bbc.co.uk')
+    this.newsService.getData('everything?domains=nytimes.com,bbc.co.uk,independent.co.uk,thetimes.co.uk')
     .subscribe(data => {
       console.log(data);
       this.data = data;
-      
     })
   }
 

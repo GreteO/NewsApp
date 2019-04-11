@@ -1,22 +1,15 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>{{article.title}}</ion-title>
+  <ion-toolbar text-wrap color="primary">
+    <ion-title text-wrap >{{article.title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
+  <ion-card color="light">
     <ion-card-content> 
       <ion-img [src]="article.urlToImage"></ion-img>
-     <!-- <ion-title>{{article.title}}</ion-title>-->
       <p>{{article.description}}</p>
-      <a href="{{article.url}}">Read Whole article</a>
+      <a href="{{article.url}}">Read article</a>
      </ion-card-content>
     </ion-card>
-      <ion-infinite-scroll>
-          <ion-infinite-scroll-content
-            loadingSpinner="bubbles"
-            loadingText="Loading more data…">
-          </ion-infinite-scroll-content>
-        </ion-infinite-scroll>
 </ion-content>

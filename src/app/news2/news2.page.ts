@@ -14,16 +14,11 @@ export class News2Page implements OnInit{
   constructor(private newsService: NewsService, private router: Router){}
 
   ngOnInit(){
-    //this.newsService.getData('top-headlines?country=us&category=business')
-    //this.newsService.getData('top-headlines?country=gb')
-    //this.newsService.getData('everything?sources=bbc-news&from=2019-03-16&to=2019-04-06&sortBy=popularity')
-   
-    this.newsService.getData('everything?domains=nytimes.com')
+    this.newsService.getData('everything?domains=bbc.co.uk')
     .subscribe(data => {
       console.log(data);
       this.data = data;
     })
-    //console.log(this.newsService.getData('everything?domains=bbc.co.uk'));
   }
 
   onGoToNewsSinglePage(article){
@@ -31,14 +26,11 @@ export class News2Page implements OnInit{
     this.router.navigate(['/news-single']);
   }
 
-  searchChanged(){
-   console.log(this.type);
-   
+  searchChanged(){   
    this.newsService.searchData(this.type)
     .subscribe(data => {
-      console.log(data);
+      //console.log(data);
       this.data = data;
-      console.log(this.data);
   })
 }
 }
