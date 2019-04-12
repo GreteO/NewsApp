@@ -6,7 +6,6 @@ Tegemist on uudiste äpiga, mis näitab esimesel lehel uudiste pealkirju erineva
 
 ![Pealeht](screenshots/main.png)
 ![Uudis](screenshots/news-single.png)
-![Erinevad](screenshots/sources.png)
 ![Valik](screenshots/choose.png)
 
 
